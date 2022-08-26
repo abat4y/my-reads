@@ -7,7 +7,7 @@ const Book = ({book , handleUpdateShelf}) => {
     handleUpdateShelf(book, value);
   };
     return (
-    <li key={book.id}>
+    <li>
     <div className="book">
     <div className="book-top">
       <div

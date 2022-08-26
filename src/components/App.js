@@ -34,7 +34,6 @@ function App() {
     if (valueSearch) {
       BooksAPI.search(valueSearch).then((data) => {
         if (data.error) {
-          console.log(data);
           setSearchBookQuery([]);
           setSearchFlag(false);
         } else {
@@ -48,6 +47,7 @@ function App() {
               });
               return searchbook;
             });
+            setSearchFlag(true);
             setSearchBookQuery(NewSearchData);
           }
         }

@@ -1,11 +1,10 @@
 
-import Book from './book';
+import Book from './Book';
 import React from "react";
 const ShelfSearch = ({searchBookQuery ,handleUpdateShelf ,SearchFlag}) => {
-    let SearchFlagCheck = SearchFlag;
     return ( 
         <ol className="books-grid">{
-            SearchFlagCheck ? (
+            SearchFlag ? (
                 searchBookQuery.map((book) => (
                     <Book key={book.id}  book={book}  handleUpdateShelf={handleUpdateShelf}/>
                    ))

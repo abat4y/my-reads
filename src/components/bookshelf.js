@@ -1,4 +1,4 @@
-import Book from './book';
+import Book from './Book';
 import React from "react";
 const  BookShelf= ({ ShelfName, books , ShelfId , handleUpdateShelf}) => {
     const bookshelfs = books.filter((book) => (book.shelf === ShelfId ));
@@ -7,7 +7,7 @@ const  BookShelf= ({ ShelfName, books , ShelfId , handleUpdateShelf}) => {
     <div className="bookshelf-books">
       <ol className="books-grid">
       {bookshelfs.map((book) => (
-         <Book key={book.id}  book={book} handleUpdateShelf={handleUpdateShelf} />
+         <Book key={book.id} book={book} handleUpdateShelf={handleUpdateShelf} />
         ))}
       </ol>
     </div>
